@@ -1,8 +1,8 @@
 const connection = require('../database/connection')
 const express = require('express');
 const router = express.Router()
-const SaleController = require('../controllers/SaleController')
+const LojaController = require('../controllers/LojaController')
 
-router.get('/sales', SaleController.getSales)
+router.get('/analisevencidos', LojaController.getAnaliseVencidos)
 
 module.exports = router

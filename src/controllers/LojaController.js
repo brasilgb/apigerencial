@@ -1,7 +1,7 @@
 const database = require('../database/connection')
 
-class SaleController {
-    getSales(request, response){
+class LojaController {
+    getAnaliseVencidos(request, response){
         database.select("*").table("lger_filialassoc").then(filial => {
             console.log(filial)
             response.json(filial)
@@ -11,4 +11,4 @@ class SaleController {
     }
 }
 
-module.exports = new SaleController()
+module.exports = new LojaController()
